@@ -1,7 +1,8 @@
-import styles from '../styles/Home.module.css'
 import Card from '../src/components/Card/Card'
 import Meta from '../src/components/Meta/Meta'
-import { Header } from '../src/components/Header/Header'
+import Header from '../src/components/Header/Header'
+import Container from '../src/components/Container/Container';
+import { SectionHeading } from '../src/components/Headings/Headings';
 
 const github_api = "https://api.github.com/users/avavion/repos";
 
@@ -33,15 +34,19 @@ export default function Home({ data }) {
     <>
       <Meta content="Alan Bogov - front-end and back-end developer." />
       <Header />
-      <main className={styles.main}>
-        <div className="grid repositories">
-          {sortedRepositories.map(
-            (repository) => (
-              <Card key={repository.id} card={repository} />
-            )
-          )}
-        </div>
-
+      <main>
+        <Container>
+          <section className="segment large">
+            <SectionHeading path='/projects'>Project</SectionHeading>
+            <div className="grid repositories">
+              {sortedRepositories.map(
+                (repository) => (
+                  <Card key={repository.id} card={repository} />
+                )
+              )}
+            </div>
+          </section>
+        </Container>
       </main>
     </>
   )

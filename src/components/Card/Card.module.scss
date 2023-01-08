@@ -3,9 +3,9 @@
   flex-direction: column;
   padding: 24px 24px 32px 24px;
 
-  background: #1f1f1f;
-  border: 1px solid #2c2c2c;
-  border-radius: 8px;
+  background: var(--card-background-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--card-border-radius);
 
   font-family: var(--font-inter);
   font-style: normal;
@@ -14,7 +14,7 @@
   .year {
     font-weight: 500;
     font-size: 12px;
-    color: #f57ad0;
+    color: var(--card-time-color);
   }
 
   .text {
@@ -26,45 +26,13 @@
   .title {
     font-weight: 700;
     font-size: 1.15rem;
-    color: var(--white);
+    color: var(--card-title-color);
 
-    &:hover .link::after {
-      opacity: 1;
-      width: 100%;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-thickness: 2px;
     }
-
-    .link {
-      text-decoration: none;
-      position: relative;
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 0;
-        height: 2px;
-        border-radius: 8px;
-
-        opacity: 0;
-
-        background-color: var(--white);
-
-        transition: opacity 250ms ease-in-out, width 550ms ease-in-out;
-      }
-    }
-  }
-}
-
-@keyframes underline {
-  from {
-    opacity: 0;
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-    opacity: 1;
   }
 }
