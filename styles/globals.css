@@ -117,3 +117,9 @@ a {
   grid-auto-rows: 1fr;
   gap: 20px;
 }
+
+@media screen and (max-width: 576px) {
+  .repositories {
+    grid-template-columns: 1fr;
+  }
+}
