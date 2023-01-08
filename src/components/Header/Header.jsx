@@ -20,7 +20,7 @@ const Header = () => {
                     <Brand />
                     <nav>
                         <NavLink href="/about">About Me</NavLink>
-                        <NavLink href="/blog">Blog</NavLink>
+                        <NavLink href="/posts">Blog</NavLink>
                         <NavLink href="/projects">Projects</NavLink>
                         <NavLink href="https://github.com/avavion" target="_blank">GitHub</NavLink>
                     </nav>

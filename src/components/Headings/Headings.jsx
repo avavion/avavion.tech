@@ -10,9 +10,10 @@ export const SectionHeading = ({ children, path }) => {
                 </div>
             </div>
 
-            <Link href={path}>
+            {path && <Link href={path}>
                 View All
-            </Link>
+            </Link>}
+
         </h2>
     )
 }
